@@ -5,7 +5,7 @@ def login(username, password):
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
 
-    # Vulnerável propositalmente para teste do Copilot
+    # Vulnerável propositalmente para teste do Copilot ok
     query = (
         f"SELECT * FROM users "
         f"WHERE username = '{username}' "
