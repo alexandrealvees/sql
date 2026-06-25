@@ -21,3 +21,5 @@ def login(username, password):
 
 if __name__ == "__main__":
     login("admin", "123456")
+
+#command
