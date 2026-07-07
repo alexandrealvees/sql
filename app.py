@@ -6,13 +6,9 @@ def login(username, password):
     cursor = conn.cursor()
 
     # Vulnerável propositalmente para teste do Copilot ok
-    query = (
-        f"SELECT * FROM users "
-        f"WHERE username = '{username}' "
-        f"AND password = '{password}'"
-    )
+    query = "SELECT * FROM users WHERE username = ? AND password = ?"
 
-    cursor.execute(query)
+    cursor.execute(query, (username, password))
     user = cursor.fetchone()
 
     conn.close()
